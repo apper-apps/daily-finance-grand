@@ -120,8 +120,7 @@ const handleAddTransaction = async (transactionData, keepOpen = false, resetForm
     .filter(t => t.type === "expense")
     .reduce((sum, t) => sum + t.amount, 0);
 
-const totalBalance = transactions
-    .reduce((sum, t) => sum + (t.type === "income" ? t.amount : -t.amount), 0);
+const totalBalance = 0;
 
   const recentTransactions = [];
 
