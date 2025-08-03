@@ -40,13 +40,7 @@ const Layout = ({ children }) => {
 return (
     <div className="min-h-screen bg-gray-900 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative overflow-hidden">
       {/* Animated Background Effects */}
-      <div className="fixed inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyber-neon to-transparent animate-pulse"></div>
-        <div className="absolute top-4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyber-cyan to-transparent animate-pulse delay-1000"></div>
-        <div className="absolute top-8 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyber-purple to-transparent animate-pulse delay-2000"></div>
-      </div>
       
-      {/* Header */}
       <header className="bg-black/80 backdrop-blur-md border-b border-cyber-neon/30 shadow-lg shadow-cyber-neon/20 sticky top-0 z-40">
         <div className="max-w-md mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -99,6 +93,19 @@ return (
           </div>
         </div>
       </nav>
+      
+      {/* Developer Credit Footer */}
+      <footer className="mt-auto py-4 px-4 border-t border-gray-800/50">
+        <div className="text-center">
+          <p className="text-sm text-gray-400 font-mono tracking-wide">
+            <span className="text-cyber-neon glow-text-small">Developed By:</span>{' '}
+            <span className="text-white font-semibold">Kamran Ahammed Aman</span>
+          </p>
+          <p className="text-xs text-gray-500 mt-1 bengali-text">
+            ডেভেলপার: কামরান আহাম্মেদ আমান
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
