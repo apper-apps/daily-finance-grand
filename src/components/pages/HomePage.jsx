@@ -9,6 +9,7 @@ import Loading from "@/components/ui/Loading";
 import Error from "@/components/ui/Error";
 import Empty from "@/components/ui/Empty";
 import Card from "@/components/atoms/Card";
+import Button from "@/components/atoms/Button";
 import ApperIcon from "@/components/ApperIcon";
 import { transactionService } from "@/services/api/transactionService";
 import { categoryService } from "@/services/api/categoryService";
@@ -150,11 +151,22 @@ const handleAddTransaction = async (transactionData, keepOpen = false, resetForm
 
       {/* Recent Transactions */}
       <div>
-        <div className="flex items-center justify-between mb-4">
+<div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-display font-semibold text-gray-900">
             সাম্প্রতিক লেনদেন
           </h2>
-          <ApperIcon name="Clock" size={20} className="text-gray-400" />
+          <div className="flex items-center gap-3">
+            <Button
+              onClick={() => setIsModalOpen(true)}
+              variant="outline"
+              size="sm"
+              className="flex items-center gap-2 text-sm font-medium hover:bg-accent-50 hover:text-accent-600 border-accent-200"
+            >
+              <ApperIcon name="Plus" size={16} />
+              নতুন লেনদেন
+            </Button>
+            <ApperIcon name="Clock" size={20} className="text-gray-400" />
+          </div>
         </div>
 
         {recentTransactions.length > 0 ? (
