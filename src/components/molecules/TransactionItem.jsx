@@ -36,12 +36,10 @@ const TransactionItem = ({ transaction, onClick }) => {
         </div>
         
         <div className="text-right">
-          <p
+<p
             className={cn(
-              "text-lg font-mono font-semibold transition-all duration-300 text-white",
-              isIncome 
-                ? "group-hover:text-cyber-neon group-hover:drop-shadow-[0_0_8px_rgba(0,255,65,0.8)]" 
-                : "group-hover:text-cyber-purple group-hover:drop-shadow-[0_0_8px_rgba(159,64,255,0.8)]"
+              "text-lg font-mono font-semibold transition-all duration-300 text-cyber-neon",
+              "group-hover:drop-shadow-[0_0_8px_rgba(0,255,65,0.8)]"
             )}
           >
             {isIncome ? "+" : "-"}{formatCurrency(transaction.amount)}

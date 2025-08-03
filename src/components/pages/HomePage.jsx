@@ -120,12 +120,10 @@ const handleAddTransaction = async (transactionData, keepOpen = false, resetForm
     .filter(t => t.type === "expense")
     .reduce((sum, t) => sum + t.amount, 0);
 
-  const totalBalance = transactions
+const totalBalance = transactions
     .reduce((sum, t) => sum + (t.type === "income" ? t.amount : -t.amount), 0);
 
-  const recentTransactions = transactions
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 5);
+  const recentTransactions = [];
 
 return (
     <div className="space-y-6 pb-20 relative">
