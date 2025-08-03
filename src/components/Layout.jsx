@@ -42,12 +42,12 @@ return (
       {/* Animated Background Effects */}
       
       <header className="bg-black/80 backdrop-blur-md border-b border-cyber-neon/30 shadow-lg shadow-cyber-neon/20 sticky top-0 z-40">
-        <div className="max-w-md mx-auto px-4 py-4">
+        <div className="max-w-md mx-auto px-3 sm:px-4 py-3 sm:py-4">
           <div className="flex items-center justify-between">
-            <h1 className="text-xl font-mono font-bold text-cyber-neon glow-text tracking-wider">
+            <h1 className="text-base sm:text-xl font-mono font-bold text-cyber-neon glow-text tracking-wider truncate pr-2">
               {getPageTitle()}
             </h1>
-            <div className="bg-gradient-to-r from-cyber-neon to-cyber-cyan rounded-full p-2 shadow-lg shadow-cyber-neon/50 glow-box">
+            <div className="bg-gradient-to-r from-cyber-neon to-cyber-cyan rounded-full p-2 shadow-lg shadow-cyber-neon/50 glow-box flex-shrink-0">
               <ApperIcon name="Wallet" size={20} className="text-black" />
             </div>
           </div>
@@ -55,14 +55,14 @@ return (
       </header>
 
       {/* Main Content */}
-      <main className="max-w-md mx-auto px-4 py-6 relative z-10">
+      <main className="max-w-md mx-auto px-3 sm:px-4 py-4 sm:py-6 relative z-10 pb-20 sm:pb-24">
         {children}
       </main>
 
-      {/* Bottom Navigation */}
+{/* Bottom Navigation */}
       <nav className="fixed bottom-0 left-0 right-0 bg-black/90 backdrop-blur-md border-t border-cyber-neon/30 z-50 shadow-lg shadow-cyber-neon/20">
         <div className="max-w-md mx-auto">
-          <div className="flex items-center justify-around py-2">
+          <div className="flex items-center justify-around py-2 sm:py-3">
             {navItems.map((item) => {
               const isActive = location.pathname === item.path;
               return (
@@ -70,7 +70,7 @@ return (
                   key={item.path}
                   to={item.path}
                   className={cn(
-                    "flex flex-col items-center space-y-1 px-4 py-2 rounded-lg transition-all duration-300 min-w-0 flex-1 transform hover:scale-105",
+                    "flex flex-col items-center space-y-1 px-2 sm:px-4 py-2 sm:py-3 rounded-lg transition-all duration-300 min-w-0 flex-1 transform hover:scale-105 touch-manipulation min-h-[60px] sm:min-h-[65px]",
                     isActive
                       ? "text-cyber-neon bg-cyber-neon/10 glow-text shadow-lg shadow-cyber-neon/30"
                       : "text-gray-400 hover:text-cyber-cyan hover:bg-cyber-cyan/10 hover:shadow-md hover:shadow-cyber-cyan/20"
@@ -78,13 +78,13 @@ return (
                 >
                   <ApperIcon
                     name={item.icon}
-                    size={20}
+                    size={22}
                     className={cn(
                       "transition-all duration-300",
                       isActive ? "text-cyber-neon drop-shadow-[0_0_8px_rgba(0,255,65,0.8)]" : "text-gray-400 hover:text-cyber-cyan"
                     )}
                   />
-                  <span className="text-xs font-mono font-medium truncate">
+                  <span className="text-[10px] sm:text-xs font-mono font-medium truncate max-w-full">
                     {item.label}
                   </span>
                 </NavLink>
@@ -93,15 +93,14 @@ return (
           </div>
         </div>
       </nav>
-      
-      {/* Developer Credit Footer */}
-      <footer className="mt-auto py-4 px-4 border-t border-gray-800/50">
+{/* Developer Credit Footer */}
+      <footer className="mt-auto py-3 sm:py-4 px-3 sm:px-4 border-t border-gray-800/50 max-w-md mx-auto">
         <div className="text-center">
-          <p className="text-sm text-gray-400 font-mono tracking-wide">
+          <p className="text-xs sm:text-sm text-gray-400 font-mono tracking-wide">
             <span className="text-cyber-neon glow-text-small">Developed By:</span>{' '}
             <span className="text-white font-semibold">Kamran Ahammed Aman</span>
           </p>
-          <p className="text-xs text-gray-500 mt-1 bengali-text">
+          <p className="text-[10px] sm:text-xs text-gray-500 mt-1 bengali-text">
             ডেভেলপার: কামরান আহাম্মেদ আমান
           </p>
         </div>

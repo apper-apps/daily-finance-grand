@@ -57,15 +57,15 @@ const handleTransactionClick = (transaction) => {
     <div className="space-y-6">
       {/* Month Selection & Search */}
       <Card className="p-4">
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-<h3 className="text-lg font-display font-semibold text-white">
+<div className="space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-0">
+            <h3 className="text-lg sm:text-xl font-display font-semibold text-white">
               লেনদেনের ইতিহাস
             </h3>
-<select
+            <select
               value={selectedMonth}
               onChange={(e) => setSelectedMonth(e.target.value)}
-              className="rounded-lg border border-gray-600 bg-gray-800/50 px-3 py-2 text-sm text-white focus:border-cyber-purple focus:outline-none focus:ring-2 focus:ring-cyber-purple/20"
+              className="w-full sm:w-auto min-w-[140px] rounded-lg border border-gray-600 bg-gray-800/50 px-3 sm:px-4 py-3 sm:py-2 text-sm sm:text-base text-white focus:border-cyber-purple focus:outline-none focus:ring-2 focus:ring-cyber-purple/20 touch-manipulation cyber-glass-effect"
             >
               <option value={format(new Date(), "yyyy-MM")}>এই মাস</option>
               <option value={format(new Date(new Date().setMonth(new Date().getMonth() - 1)), "yyyy-MM")}>
