@@ -43,19 +43,42 @@ export const formatDateBengali = (date) => {
   const year = format(date, "yyyy");
   
   const bengaliMonths = {
-    "Jan": "জানু",
-    "Feb": "ফেব",
+    "Jan": "জানুয়ারি",
+    "Feb": "ফেব্রুয়ারি",
     "Mar": "মার্চ",
     "Apr": "এপ্রিল",
     "May": "মে",
     "Jun": "জুন",
     "Jul": "জুলাই",
     "Aug": "আগস্ট",
-    "Sep": "সেপ্টে",
-    "Oct": "অক্টো",
-    "Nov": "নভে",
-    "Dec": "ডিসে"
+    "Sep": "সেপ্টেম্বর",
+    "Oct": "অক্টোবর",
+    "Nov": "নভেম্বর",
+    "Dec": "ডিসেম্বর"
   };
   
   return `${day} ${bengaliMonths[month]} ${year}`;
+};
+
+export const formatMonthBengali = (dateString) => {
+  const date = new Date(dateString + "-01");
+  const month = format(date, "MMM");
+  const year = format(date, "yyyy");
+  
+  const bengaliMonths = {
+    "Jan": "জানুয়ারি",
+    "Feb": "ফেব্রুয়ারি", 
+    "Mar": "মার্চ",
+    "Apr": "এপ্রিল",
+    "May": "মে",
+    "Jun": "জুন",
+    "Jul": "জুলাই",
+    "Aug": "আগস্ট",
+    "Sep": "সেপ্টেম্বর",
+    "Oct": "অক্টোবর",
+    "Nov": "নভেম্বর",
+    "Dec": "ডিসেম্বর"
+  };
+  
+  return `${bengaliMonths[month]} ${year}`;
 };

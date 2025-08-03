@@ -19,7 +19,7 @@ class TransactionService {
     return { ...transaction };
   }
 
-  async create(transactionData) {
+async create(transactionData) {
     await this.delay(400);
     
     const maxId = this.transactions.length > 0 
@@ -29,6 +29,7 @@ class TransactionService {
     const newTransaction = {
       Id: maxId + 1,
       ...transactionData,
+      date: transactionData.date || new Date().toISOString(),
       createdAt: new Date().toISOString()
     };
     

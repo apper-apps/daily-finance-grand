@@ -62,7 +62,7 @@ const TransactionHistory = ({ transactions, onDeleteTransaction }) => {
             <h3 className="text-lg font-display font-semibold text-gray-900">
               লেনদেনের ইতিহাস
             </h3>
-            <select
+<select
               value={selectedMonth}
               onChange={(e) => setSelectedMonth(e.target.value)}
               className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20"
@@ -73,6 +73,15 @@ const TransactionHistory = ({ transactions, onDeleteTransaction }) => {
               </option>
               <option value={format(new Date(new Date().setMonth(new Date().getMonth() - 2)), "yyyy-MM")}>
                 {format(new Date(new Date().setMonth(new Date().getMonth() - 2)), "MMM yyyy")}
+              </option>
+              <option value={format(new Date(new Date().setMonth(new Date().getMonth() - 3)), "yyyy-MM")}>
+                {format(new Date(new Date().setMonth(new Date().getMonth() - 3)), "MMM yyyy")}
+              </option>
+              <option value={format(new Date(new Date().setMonth(new Date().getMonth() - 4)), "yyyy-MM")}>
+                {format(new Date(new Date().setMonth(new Date().getMonth() - 4)), "MMM yyyy")}
+              </option>
+              <option value={format(new Date(new Date().setMonth(new Date().getMonth() - 5)), "yyyy-MM")}>
+                {format(new Date(new Date().setMonth(new Date().getMonth() - 5)), "MMM yyyy")}
               </option>
             </select>
           </div>

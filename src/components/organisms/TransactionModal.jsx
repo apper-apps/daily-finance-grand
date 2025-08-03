@@ -12,7 +12,8 @@ const TransactionModal = ({ isOpen, onClose, onSubmit, categories }) => {
     amount: "",
     type: "expense",
     category: "",
-    note: ""
+    note: "",
+    date: new Date().toISOString().split('T')[0]
   });
   const [errors, setErrors] = useState({});
 
@@ -22,12 +23,12 @@ const TransactionModal = ({ isOpen, onClose, onSubmit, categories }) => {
         amount: "",
         type: "expense",
         category: "",
-        note: ""
+        note: "",
+        date: new Date().toISOString().split('T')[0]
       });
       setErrors({});
     }
   }, [isOpen]);
-
   const validateForm = () => {
     const newErrors = {};
 
@@ -43,17 +44,18 @@ const TransactionModal = ({ isOpen, onClose, onSubmit, categories }) => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+const handleSubmit = (e) => {
     e.preventDefault();
     
     if (!validateForm()) {
       return;
     }
 
+    const selectedDate = new Date(formData.date);
     const transactionData = {
       ...formData,
       amount: parseFloat(formData.amount),
-      date: new Date().toISOString(),
+      date: selectedDate.toISOString(),
       createdAt: new Date().toISOString()
     };
 
@@ -176,6 +178,26 @@ const TransactionModal = ({ isOpen, onClose, onSubmit, categories }) => {
                       rows={2}
                       className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2.5 text-base text-gray-900 placeholder:text-gray-400 focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20 resize-none"
                     />
+</div>
+
+                  {/* Date Selector */}
+                  <div className="space-y-2">
+                    <label className="block text-sm font-medium text-gray-700">
+                      তারিখ
+                    </label>
+                    <Input
+                      type="date"
+                      value={formData.date}
+                      onChange={(e) => setFormData({ ...formData, date: e.target.value })}
+                      max={new Date().toISOString().split('T')[0]}
+                      className={cn(
+                        "w-full",
+                        errors.date && "border-red-500 focus:ring-red-500"
+                      )}
+                    />
+                    {errors.date && (
+                      <p className="text-xs text-red-600">{errors.date}</p>
+                    )}
                   </div>
 
                   {/* Actions */}
