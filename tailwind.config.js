@@ -8,38 +8,59 @@ export default {
     extend: {
       colors: {
         primary: {
-          50: '#e8f5e8',
-          100: '#c8e6c8',
-          500: '#2E7D32',
-          600: '#2e7d32',
-          700: '#1b5e20'
+          50: 'rgba(0, 255, 65, 0.1)',
+          100: 'rgba(0, 255, 65, 0.2)',
+          500: '#00ff41',
+          600: '#00e639',
+          700: '#00cc31'
         },
         secondary: {
-          50: '#e3f2fd',
-          100: '#bbdefb',
-          500: '#1565C0',
-          600: '#1565c0',
-          700: '#0d47a1'
+          50: 'rgba(0, 255, 255, 0.1)',
+          100: 'rgba(0, 255, 255, 0.2)',
+          500: '#00ffff',
+          600: '#00e6e6',
+          700: '#00cccc'
         },
         accent: {
-          50: '#fff3e0',
-          100: '#ffe0b2',
-          500: '#F57C00',
-          600: '#f57c00',
-          700: '#ef6c00'
+          50: 'rgba(0, 255, 65, 0.1)',
+          100: 'rgba(0, 255, 65, 0.2)',
+          200: 'rgba(0, 255, 65, 0.3)',
+          500: '#00ff41',
+          600: '#00e639',
+          700: '#00cc31'
         },
-        success: '#4CAF50',
-        warning: '#FF9800',
-        error: '#F44336',
-        info: '#2196F3'
+        'cyber-neon': '#00ff41',
+        'cyber-cyan': '#00ffff',
+        'cyber-purple': '#8b00ff',
+        'cyber-red': '#ff0040',
+        'cyber-yellow': '#ffff00',
+        'cyber-orange': '#ff8000',
+        success: '#00ff41',
+        warning: '#ffff00',
+        error: '#ff0040',
+        info: '#00ffff'
       },
       fontFamily: {
-        'display': ['DM Sans', 'sans-serif'],
-        'body': ['Inter', 'sans-serif']
+        'display': ['Orbitron', 'monospace'],
+        'body': ['Share Tech Mono', 'monospace'],
+        'mono': ['Share Tech Mono', 'monospace']
       },
       boxShadow: {
-        'card': '0 2px 8px rgba(0,0,0,0.1)',
-        'float': '0 4px 12px rgba(0,0,0,0.15)'
+        'card': '0 0 20px rgba(0, 255, 65, 0.2), 0 0 10px rgba(0, 0, 0, 0.8)',
+        'float': '0 0 30px rgba(0, 255, 65, 0.3), 0 4px 15px rgba(0, 0, 0, 0.9)',
+        'cyber-glow': '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
+        'cyber-strong': '0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor',
+        'neon-box': '0 0 20px rgba(0, 255, 65, 0.4), inset 0 0 20px rgba(0, 255, 65, 0.1)'
+      },
+      animation: {
+        'cyber-pulse': 'cyber-pulse 2s ease-in-out infinite',
+        'cyber-glow': 'cyber-glow 2s ease-in-out infinite',
+        'matrix-rain': 'matrix-rain 20s linear infinite',
+        'scan-line': 'scan-line 3s linear infinite',
+        'cyber-flicker': 'cyber-flicker 0.1s ease-in-out infinite'
+      },
+      backdropBlur: {
+        'cyber': '15px'
       }
     },
   },

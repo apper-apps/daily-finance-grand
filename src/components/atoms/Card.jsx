@@ -4,9 +4,9 @@ import { cn } from "@/utils/cn";
 const Card = forwardRef(({ className, children, ...props }, ref) => {
   return (
     <div
-      ref={ref}
+ref={ref}
       className={cn(
-        "rounded-xl bg-white shadow-card border border-gray-100 overflow-hidden",
+        "rounded-xl bg-gray-900/80 backdrop-blur-sm shadow-2xl border border-gray-700 overflow-hidden relative cyber-card",
         className
       )}
       {...props}

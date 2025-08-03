@@ -9,13 +9,13 @@ const Button = forwardRef(({
   disabled,
   ...props 
 }, ref) => {
-  const variants = {
-    primary: "bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white shadow-float",
-    secondary: "bg-white hover:bg-gray-50 text-gray-900 border border-gray-200 shadow-card",
-    success: "bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white shadow-float",
-    danger: "bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white shadow-float",
-    outline: "border-2 border-accent-500 text-accent-600 hover:bg-accent-50",
-    ghost: "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+const variants = {
+    primary: "bg-gradient-to-r from-cyber-neon to-cyber-neon/80 hover:from-cyber-neon/90 hover:to-cyber-neon text-black font-bold glow-box hover:glow-box-strong shadow-lg shadow-cyber-neon/30",
+    secondary: "bg-gray-800/50 hover:bg-gray-800/70 text-gray-200 border border-gray-600 hover:border-gray-500 font-mono shadow-lg backdrop-blur-sm",
+    success: "bg-gradient-to-r from-cyber-neon to-cyber-neon/80 hover:from-cyber-neon/90 hover:to-cyber-neon text-black font-bold glow-box shadow-lg shadow-cyber-neon/30",
+    danger: "bg-gradient-to-r from-cyber-red to-cyber-red/80 hover:from-cyber-red/90 hover:to-cyber-red text-white font-bold glow-box shadow-lg shadow-cyber-red/30",
+    outline: "border-2 border-cyber-neon text-cyber-neon hover:bg-cyber-neon/10 glow-text hover:glow-box-small font-mono backdrop-blur-sm",
+    ghost: "text-gray-400 hover:text-cyber-neon hover:bg-cyber-neon/5 font-mono transition-all duration-300"
   };
 
   const sizes = {
@@ -28,7 +28,7 @@ const Button = forwardRef(({
   return (
     <button
       className={cn(
-        "inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-500 disabled:opacity-50 disabled:cursor-not-allowed transform active:scale-95",
+        "inline-flex items-center justify-center rounded-lg font-mono transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyber-neon/50 disabled:opacity-50 disabled:cursor-not-allowed transform active:scale-95 hover:scale-105",
         variants[variant],
         sizes[size],
         className

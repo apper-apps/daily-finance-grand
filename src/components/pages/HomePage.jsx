@@ -127,8 +127,8 @@ const handleAddTransaction = async (transactionData, keepOpen = false, resetForm
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 5);
 
-  return (
-    <div className="space-y-6 pb-20">
+return (
+    <div className="space-y-6 pb-20 relative">
       {/* Balance Card */}
       <BalanceCard
         balance={totalBalance}
@@ -152,7 +152,7 @@ const handleAddTransaction = async (transactionData, keepOpen = false, resetForm
       {/* Recent Transactions */}
       <div>
 <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-display font-semibold text-gray-900">
+          <h2 className="text-lg font-mono font-semibold text-cyber-neon glow-text tracking-wide">
             সাম্প্রতিক লেনদেন
           </h2>
           <div className="flex items-center gap-3">
@@ -160,12 +160,12 @@ const handleAddTransaction = async (transactionData, keepOpen = false, resetForm
               onClick={() => setIsModalOpen(true)}
               variant="outline"
               size="sm"
-              className="flex items-center gap-2 text-sm font-medium hover:bg-accent-50 hover:text-accent-600 border-accent-200"
+              className="flex items-center gap-2 text-sm font-mono font-medium hover:bg-cyber-neon/10 hover:text-cyber-neon border-cyber-neon/50 hover:border-cyber-neon hover:shadow-lg hover:shadow-cyber-neon/30 transition-all duration-300"
             >
               <ApperIcon name="Plus" size={16} />
               নতুন লেনদেন
             </Button>
-            <ApperIcon name="Clock" size={20} className="text-gray-400" />
+            <ApperIcon name="Clock" size={20} className="text-cyber-cyan animate-pulse" />
           </div>
         </div>
 
@@ -180,7 +180,7 @@ const handleAddTransaction = async (transactionData, keepOpen = false, resetForm
             ))}
           </div>
         ) : (
-          <Empty
+<Empty
             title="কোনো লেনদেন নেই"
             description="আপনার প্রথম আয় বা খরচ যোগ করে শুরু করুন।"
             action={() => setIsModalOpen(true)}

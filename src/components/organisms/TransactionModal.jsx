@@ -88,7 +88,7 @@ const handleSubmit = (e) => {
   };
 
   return (
-    <AnimatePresence>
+<AnimatePresence>
       {isOpen && (
         <div className="fixed inset-0 z-50 overflow-hidden">
           {/* Backdrop */}
@@ -97,7 +97,7 @@ const handleSubmit = (e) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 glass-effect-dark"
+            className="fixed inset-0 cyber-glass-effect-dark"
             onClick={onClose}
           />
 
@@ -110,50 +110,50 @@ const handleSubmit = (e) => {
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className="w-full max-w-md"
             >
-              <Card className="p-6">
+              <Card className="p-6 cyber-card glow-box border-2 border-cyber-neon/30">
                 {/* Header */}
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-xl font-display font-semibold text-gray-900">
+<div className="flex items-center justify-between mb-6">
+                  <h2 className="text-xl font-mono font-semibold text-cyber-neon glow-text tracking-wide">
                     নতুন লেনদেন
                   </h2>
                   <button
                     onClick={onClose}
-                    className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                    className="p-2 hover:bg-cyber-neon/10 rounded-full transition-all duration-300 border border-gray-600 hover:border-cyber-neon/50 hover:shadow-lg hover:shadow-cyber-neon/30"
                   >
-                    <ApperIcon name="X" size={20} className="text-gray-500" />
+                    <ApperIcon name="X" size={20} className="text-gray-400 hover:text-cyber-neon transition-colors duration-300" />
                   </button>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Type Selection */}
-                  <div>
-                    <p className="text-sm font-medium text-gray-700 mb-3">ধরন</p>
+<div>
+                    <p className="text-sm font-mono font-medium text-gray-300 mb-3 tracking-wide">ধরন</p>
                     <div className="grid grid-cols-2 gap-3">
                       <button
                         type="button"
                         onClick={() => handleTypeChange("income")}
                         className={cn(
-                          "flex items-center justify-center space-x-2 py-3 px-4 rounded-xl border-2 transition-all duration-200",
+                          "flex items-center justify-center space-x-2 py-3 px-4 rounded-xl border-2 transition-all duration-300 transform hover:scale-105",
                           formData.type === "income"
-                            ? "border-primary-500 bg-primary-50 text-primary-700"
-                            : "border-gray-200 hover:border-gray-300 text-gray-600"
+                            ? "border-cyber-neon bg-cyber-neon/10 text-cyber-neon glow-box shadow-lg shadow-cyber-neon/30"
+                            : "border-gray-600 hover:border-cyber-neon/50 text-gray-300 hover:text-cyber-neon bg-gray-800/50 hover:bg-cyber-neon/5"
                         )}
                       >
                         <ApperIcon name="TrendingUp" size={18} />
-                        <span className="font-medium">আয়</span>
+                        <span className="font-mono font-medium">আয়</span>
                       </button>
                       <button
                         type="button"
                         onClick={() => handleTypeChange("expense")}
                         className={cn(
-                          "flex items-center justify-center space-x-2 py-3 px-4 rounded-xl border-2 transition-all duration-200",
+                          "flex items-center justify-center space-x-2 py-3 px-4 rounded-xl border-2 transition-all duration-300 transform hover:scale-105",
                           formData.type === "expense"
-                            ? "border-secondary-500 bg-secondary-50 text-secondary-700"
-                            : "border-gray-200 hover:border-gray-300 text-gray-600"
+                            ? "border-cyber-cyan bg-cyber-cyan/10 text-cyber-cyan glow-box shadow-lg shadow-cyber-cyan/30"
+                            : "border-gray-600 hover:border-cyber-cyan/50 text-gray-300 hover:text-cyber-cyan bg-gray-800/50 hover:bg-cyber-cyan/5"
                         )}
                       >
                         <ApperIcon name="TrendingDown" size={18} />
-                        <span className="font-medium">খরচ</span>
+                        <span className="font-mono font-medium">খরচ</span>
                       </button>
                     </div>
                   </div>
@@ -170,7 +170,7 @@ const handleSubmit = (e) => {
 
                   {/* Category Selection */}
                   <div>
-                    <p className="text-sm font-medium text-gray-700 mb-3">ক্যাটেগরি</p>
+                    <p className="text-sm font-mono font-medium text-gray-300 mb-3 tracking-wide">ক্যাটেগরি</p>
                     <CategorySelector
                       categories={categories}
                       selectedCategory={formData.category}
@@ -178,13 +178,13 @@ const handleSubmit = (e) => {
                       type={formData.type}
                     />
                     {errors.category && (
-                      <p className="mt-2 text-sm text-red-600">{errors.category}</p>
+                      <p className="mt-2 text-sm text-cyber-red font-mono glow-text-small">{errors.category}</p>
                     )}
                   </div>
 
                   {/* Note Input */}
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-mono font-medium text-gray-300 mb-2 tracking-wide">
                       নোট (ঐচ্ছিক)
                     </label>
                     <textarea
@@ -192,9 +192,9 @@ const handleSubmit = (e) => {
                       onChange={(e) => setFormData(prev => ({ ...prev, note: e.target.value }))}
                       placeholder="অতিরিক্ত তথ্য লিখুন..."
                       rows={2}
-                      className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2.5 text-base text-gray-900 placeholder:text-gray-400 focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20 resize-none"
+                      className="w-full rounded-lg border border-gray-600 bg-gray-800/50 px-3 py-2.5 text-base text-gray-200 placeholder:text-gray-500 focus:border-cyber-neon focus:outline-none focus:ring-2 focus:ring-cyber-neon/20 resize-none font-mono transition-all duration-300 hover:border-gray-500"
                     />
-</div>
+                  </div>
 
                   {/* Date Selector */}
                   <div className="space-y-2">
@@ -216,7 +216,7 @@ const handleSubmit = (e) => {
                     )}
                   </div>
 
-                  {/* Actions */}
+{/* Actions */}
                   <div className="flex space-x-3 pt-4">
                     <Button
                       type="button"

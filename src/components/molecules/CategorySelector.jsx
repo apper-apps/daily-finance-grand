@@ -4,7 +4,7 @@ import { cn } from "@/utils/cn";
 
 const CategorySelector = ({ categories, selectedCategory, onSelect, type = "expense" }) => {
   return (
-    <div className="grid grid-cols-4 gap-3">
+<div className="grid grid-cols-4 gap-3">
       {categories
         .filter(cat => cat.type === type)
         .map((category) => (
@@ -12,14 +12,19 @@ const CategorySelector = ({ categories, selectedCategory, onSelect, type = "expe
             key={category.Id}
             onClick={() => onSelect(category.name)}
             className={cn(
-              "flex flex-col items-center space-y-2 p-3 rounded-xl border-2 transition-all duration-200 hover:scale-105",
+              "flex flex-col items-center space-y-2 p-3 rounded-xl border-2 transition-all duration-300 hover:scale-105 transform cyber-card",
               selectedCategory === category.name
-                ? "border-accent-500 bg-accent-50"
-                : "border-gray-200 hover:border-gray-300 bg-white"
+                ? "border-cyber-neon bg-cyber-neon/10 glow-box shadow-lg shadow-cyber-neon/30"
+                : "border-gray-600 hover:border-cyber-cyan bg-gray-800/50 hover:bg-cyber-cyan/10 hover:shadow-md hover:shadow-cyber-cyan/20"
             )}
           >
             <CategoryIcon category={category.name} size="md" />
-            <span className="text-xs font-medium text-gray-700 text-center leading-tight">
+            <span className={cn(
+              "text-xs font-mono font-medium text-center leading-tight transition-colors duration-300",
+              selectedCategory === category.name
+                ? "text-cyber-neon glow-text-small"
+                : "text-gray-300 group-hover:text-cyber-cyan"
+            )}>
               {category.name}
             </span>
           </button>

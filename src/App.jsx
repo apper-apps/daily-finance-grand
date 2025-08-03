@@ -9,7 +9,7 @@ import SettingsPage from "@/components/pages/SettingsPage";
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-50">
+<div className="min-h-screen bg-gray-900 bg-gradient-to-br from-gray-900 via-gray-800 to-black">
         <Layout>
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -18,7 +18,7 @@ function App() {
           </Routes>
         </Layout>
 
-        <ToastContainer
+<ToastContainer
           position="top-right"
           autoClose={3000}
           hideProgressBar={false}
@@ -28,7 +28,8 @@ function App() {
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          theme="light"
+          theme="dark"
+          toastClassName="cyber-toast"
         />
       </div>
     </BrowserRouter>
