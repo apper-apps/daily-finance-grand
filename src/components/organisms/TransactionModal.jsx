@@ -8,7 +8,7 @@ import ApperIcon from "@/components/ApperIcon";
 import { cn } from "@/utils/cn";
 
 const TransactionModal = ({ isOpen, onClose, onSubmit, categories }) => {
-  const [formData, setFormData] = useState({
+const [formData, setFormData] = useState({
     amount: "",
     type: "expense",
     category: "",
@@ -16,7 +16,18 @@ const TransactionModal = ({ isOpen, onClose, onSubmit, categories }) => {
     date: new Date().toISOString().split('T')[0]
   });
   const [errors, setErrors] = useState({});
+  const [keepOpen, setKeepOpen] = useState(false);
 
+  const resetForm = () => {
+    setFormData({
+      amount: "",
+      type: "expense",
+      category: "",
+      note: "",
+      date: new Date().toISOString().split('T')[0]
+    });
+    setErrors({});
+  };
   useEffect(() => {
     if (!isOpen) {
       setFormData({
@@ -59,8 +70,13 @@ const handleSubmit = (e) => {
       createdAt: new Date().toISOString()
     };
 
-    onSubmit(transactionData);
-    onClose();
+    onSubmit(transactionData, keepOpen, resetForm);
+    
+    if (keepOpen) {
+      resetForm();
+    } else {
+      onClose();
+    }
   };
 
   const handleTypeChange = (type) => {

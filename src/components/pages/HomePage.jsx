@@ -46,11 +46,16 @@ const HomePage = () => {
     loadData();
   }, []);
 
-  const handleAddTransaction = async (transactionData) => {
+const handleAddTransaction = async (transactionData, keepOpen = false, resetForm = null) => {
     try {
       const newTransaction = await transactionService.create(transactionData);
       setTransactions(prev => [newTransaction, ...prev]);
-      toast.success("লেনদেন সফলভাবে যোগ করা হয়েছে!");
+      
+      if (keepOpen) {
+        toast.success("লেনদেন যোগ করা হয়েছে! আরেকটি যোগ করুন।");
+      } else {
+        toast.success("লেনদেন সফলভাবে যোগ করা হয়েছে!");
+      }
     } catch (err) {
       toast.error("লেনদেন যোগ করতে সমস্যা হয়েছে");
       console.error("Error adding transaction:", err);
