@@ -10,11 +10,14 @@ class TransactionService {
     return [...this.transactions];
   }
 
-  async getById(id) {
+async getById(id) {
     await this.delay(200);
-    const transaction = this.transactions.find(t => t.Id === parseInt(id));
+    if (!id) {
+      throw new Error("Transaction ID is required");
+    }
+    const transaction = this.transactions.find(t => t.id === parseInt(id) || t.Id === parseInt(id));
     if (!transaction) {
-      throw new Error("Transaction not found");
+      throw new Error(`Transaction not found with ID: ${id}`);
     }
     return { ...transaction };
   }
@@ -37,29 +40,37 @@ async create(transactionData) {
     return { ...newTransaction };
   }
 
-  async update(id, updateData) {
+async update(id, updateData) {
     await this.delay(300);
     
-    const index = this.transactions.findIndex(t => t.Id === parseInt(id));
+    if (!id) {
+      throw new Error("Transaction ID is required");
+    }
+    
+    const index = this.transactions.findIndex(t => t.id === parseInt(id) || t.Id === parseInt(id));
     if (index === -1) {
-      throw new Error("Transaction not found");
+      throw new Error(`Transaction not found with ID: ${id}`);
     }
     
     this.transactions[index] = {
       ...this.transactions[index],
       ...updateData,
-      Id: parseInt(id)
+      id: parseInt(id)
     };
     
     return { ...this.transactions[index] };
   }
 
-  async delete(id) {
+async delete(id) {
     await this.delay(250);
     
-    const index = this.transactions.findIndex(t => t.Id === parseInt(id));
+    if (!id) {
+      throw new Error("Transaction ID is required");
+    }
+    
+    const index = this.transactions.findIndex(t => t.id === parseInt(id) || t.Id === parseInt(id));
     if (index === -1) {
-      throw new Error("Transaction not found");
+      throw new Error(`Transaction not found with ID: ${id}`);
     }
     
     this.transactions.splice(index, 1);

@@ -39,9 +39,9 @@ const TransactionHistory = ({ transactions, onDeleteTransaction }) => {
     setFilteredTransactions(filtered);
   }, [transactions, searchQuery, selectedMonth]);
 
-  const handleTransactionClick = (transaction) => {
+const handleTransactionClick = (transaction) => {
     if (window.confirm("এই লেনদেনটি মুছে ফেলতে চান?")) {
-      onDeleteTransaction(transaction.Id);
+      onDeleteTransaction(transaction.id || transaction.Id);
     }
   };
 
@@ -113,9 +113,9 @@ const TransactionHistory = ({ transactions, onDeleteTransaction }) => {
       {/* Transaction List */}
       <div className="space-y-3">
         {filteredTransactions.length > 0 ? (
-          filteredTransactions.map((transaction) => (
+filteredTransactions.map((transaction) => (
             <TransactionItem
-              key={transaction.Id}
+              key={transaction.id || transaction.Id}
               transaction={transaction}
               onClick={() => handleTransactionClick(transaction)}
             />
