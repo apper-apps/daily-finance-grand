@@ -1,0 +1,79 @@
+[
+  {
+    "Id": 1,
+    "name": "বেতন",
+    "icon": "Banknote",
+    "type": "income",
+    "isCustom": false
+  },
+  {
+    "Id": 2,
+    "name": "ব্যবসা",
+    "icon": "Building2",
+    "type": "income",
+    "isCustom": false
+  },
+  {
+    "Id": 3,
+    "name": "অন্যান্য আয়",
+    "icon": "PlusCircle",
+    "type": "income",
+    "isCustom": false
+  },
+  {
+    "Id": 4,
+    "name": "খাবার",
+    "icon": "Utensils",
+    "type": "expense",
+    "isCustom": false
+  },
+  {
+    "Id": 5,
+    "name": "যাতায়াত",
+    "icon": "Car",
+    "type": "expense",
+    "isCustom": false
+  },
+  {
+    "Id": 6,
+    "name": "কেনাকাটা",
+    "icon": "ShoppingBag",
+    "type": "expense",
+    "isCustom": false
+  },
+  {
+    "Id": 7,
+    "name": "বিল",
+    "icon": "Receipt",
+    "type": "expense",
+    "isCustom": false
+  },
+  {
+    "Id": 8,
+    "name": "বিনোদন",
+    "icon": "Gamepad2",
+    "type": "expense",
+    "isCustom": false
+  },
+  {
+    "Id": 9,
+    "name": "স্বাস্থ্য",
+    "icon": "Heart",
+    "type": "expense",
+    "isCustom": false
+  },
+  {
+    "Id": 10,
+    "name": "শিক্ষা",
+    "icon": "GraduationCap",
+    "type": "expense",
+    "isCustom": false
+  },
+  {
+    "Id": 11,
+    "name": "অন্যান্য খরচ",
+    "icon": "MinusCircle",
+    "type": "expense",
+    "isCustom": false
+  }
+]

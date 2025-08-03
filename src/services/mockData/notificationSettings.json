@@ -1,0 +1,8 @@
+{
+  "morningEnabled": true,
+  "morningTime": "09:00",
+  "afternoonEnabled": true,
+  "afternoonTime": "14:00",
+  "eveningEnabled": true,
+  "eveningTime": "20:00"
+}
