@@ -11,10 +11,10 @@ const Error = ({ message = "কিছু ভুল হয়েছে", onRetry 
       </div>
       
       <h3 className="text-lg font-display font-semibold text-gray-900 mb-2">
-        ত্রুটি ঘটেছে
+ত্রুটি ঘটেছে
       </h3>
       
-      <p className="text-gray-600 mb-6 max-w-md mx-auto">
+      <p className="text-white/70 mb-6 max-w-md mx-auto">
         {message}
       </p>
       

@@ -16,7 +16,7 @@
 body {
   font-family: 'Share Tech Mono', monospace;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
-  color: #00ff41;
+  color: #ffffff;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -29,10 +29,12 @@ body {
 :root {
   --cyber-neon: #00ff41;
   --cyber-cyan: #00ffff;
-  --cyber-purple: #8b00ff;
+  --cyber-purple: #9f40ff;
   --cyber-red: #ff0040;
   --cyber-yellow: #ffff00;
   --cyber-orange: #ff8000;
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
 }
 
 /* Cyberpunk Toast Overrides */
@@ -145,14 +147,15 @@ body {
 
 /* Cyberpunk Utility Classes */
 .glow-text {
+  color: var(--text-primary);
   text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor, 0 0 20px currentColor;
   animation: cyber-pulse 2s ease-in-out infinite;
 }
 
 .glow-text-small {
+  color: var(--text-primary);
   text-shadow: 0 0 3px currentColor, 0 0 6px currentColor, 0 0 9px currentColor;
 }
-
 .glow-box {
   box-shadow: 
     0 0 5px rgba(0, 255, 65, 0.3),
@@ -261,9 +264,9 @@ body {
 .bengali-text {
   font-family: 'Noto Sans Bengali', sans-serif;
   line-height: 1.7;
+  color: var(--text-primary);
   text-shadow: 0 0 3px currentColor;
 }
-
 /* Enhanced notification styles */
 .notification-quote {
   font-family: 'Noto Sans Bengali', sans-serif;

@@ -20,8 +20,8 @@ return (
         
         <div className="flex items-center justify-between mb-4">
           <div>
-            <p className="text-white/80 text-sm font-mono font-medium tracking-wide">বর্তমান ব্যালেন্স</p>
-            <p className="text-3xl font-mono font-bold mt-1 glow-text">
+<p className="text-white text-sm font-mono font-medium tracking-wide">বর্তমান ব্যালেন্স</p>
+            <p className="text-3xl font-mono font-bold mt-1 text-white glow-text-small">
               {formatCurrency(balance)}
             </p>
           </div>
@@ -34,19 +34,19 @@ return (
           <div className="bg-white/10 rounded-lg p-3 border border-white/20 hover:border-cyber-neon/50 transition-all duration-300">
             <div className="flex items-center space-x-2 mb-1">
               <ApperIcon name="TrendingUp" size={16} className="text-cyber-neon animate-pulse" />
-              <p className="text-white/80 text-xs font-mono">আজকের আয়</p>
+              <p className="text-white text-xs font-mono">আজকের আয়</p>
             </div>
-            <p className="text-lg font-mono font-semibold glow-text-small">
+            <p className="text-lg font-mono font-semibold text-white">
               {formatCurrency(todayIncome)}
             </p>
           </div>
 
-          <div className="bg-white/10 rounded-lg p-3 border border-white/20 hover:border-cyber-cyan/50 transition-all duration-300">
+          <div className="bg-white/10 rounded-lg p-3 border border-white/20 hover:border-cyber-purple/50 transition-all duration-300">
             <div className="flex items-center space-x-2 mb-1">
-              <ApperIcon name="TrendingDown" size={16} className="text-cyber-cyan animate-pulse" />
-              <p className="text-white/80 text-xs font-mono">আজকের খরচ</p>
+              <ApperIcon name="TrendingDown" size={16} className="text-cyber-purple animate-pulse" />
+              <p className="text-white text-xs font-mono">আজকের খরচ</p>
             </div>
-            <p className="text-lg font-mono font-semibold glow-text-small">
+            <p className="text-lg font-mono font-semibold text-white">
               {formatCurrency(todayExpense)}
             </p>
           </div>

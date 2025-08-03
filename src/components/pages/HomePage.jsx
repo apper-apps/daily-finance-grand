@@ -152,7 +152,7 @@ return (
       {/* Recent Transactions */}
       <div>
 <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-mono font-semibold text-cyber-neon glow-text tracking-wide">
+          <h2 className="text-lg font-mono font-semibold text-white glow-text-small tracking-wide">
             সাম্প্রতিক লেনদেন
           </h2>
           <div className="flex items-center gap-3">
@@ -160,12 +160,12 @@ return (
               onClick={() => setIsModalOpen(true)}
               variant="outline"
               size="sm"
-              className="flex items-center gap-2 text-sm font-mono font-medium hover:bg-cyber-neon/10 hover:text-cyber-neon border-cyber-neon/50 hover:border-cyber-neon hover:shadow-lg hover:shadow-cyber-neon/30 transition-all duration-300"
+              className="flex items-center gap-2 text-sm font-mono font-medium hover:bg-cyber-purple/10 hover:text-white border-cyber-purple/50 hover:border-cyber-purple hover:shadow-lg hover:shadow-cyber-purple/30 transition-all duration-300"
             >
               <ApperIcon name="Plus" size={16} />
               নতুন লেনদেন
             </Button>
-            <ApperIcon name="Clock" size={20} className="text-cyber-cyan animate-pulse" />
+            <ApperIcon name="Clock" size={20} className="text-cyber-purple animate-pulse" />
           </div>
         </div>
 

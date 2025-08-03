@@ -11,9 +11,9 @@ const Empty = ({
   icon = "Inbox"
 }) => {
   return (
-    <Card className="p-8 text-center">
-      <div className="bg-gray-50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-        <ApperIcon name={icon} size={32} className="text-gray-400" />
+<Card className="p-8 text-center">
+      <div className="bg-gray-800/50 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 border border-gray-600">
+        <ApperIcon name={icon} size={32} className="text-white" />
       </div>
       
       <h3 className="text-lg font-display font-semibold text-gray-900 mb-2">

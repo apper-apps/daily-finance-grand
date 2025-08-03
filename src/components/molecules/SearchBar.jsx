@@ -7,8 +7,8 @@ const SearchBar = ({ value, onChange, placeholder = "লেনদেন খু�
     <div className="relative">
       <ApperIcon
         name="Search"
-        size={20}
-        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
+size={20}
+        className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white"
       />
       <Input
         type="text"

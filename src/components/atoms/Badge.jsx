@@ -8,11 +8,11 @@ const Badge = forwardRef(({
   ...props 
 }, ref) => {
 const variants = {
-    default: "bg-gray-800 text-gray-300 border border-gray-600",
-    success: "bg-cyber-neon/10 text-cyber-neon border border-cyber-neon/30 glow-text-small",
-    danger: "bg-cyber-red/10 text-cyber-red border border-cyber-red/30 glow-text-small",
-    warning: "bg-cyber-yellow/10 text-cyber-yellow border border-cyber-yellow/30 glow-text-small",
-    info: "bg-cyber-cyan/10 text-cyber-cyan border border-cyber-cyan/30 glow-text-small"
+    default: "bg-gray-800 text-white border border-gray-600",
+    success: "bg-cyber-neon/10 text-white border border-cyber-neon/30 glow-text-small",
+    danger: "bg-cyber-red/10 text-white border border-cyber-red/30 glow-text-small",
+    warning: "bg-cyber-yellow/10 text-white border border-cyber-yellow/30 glow-text-small",
+    info: "bg-cyber-purple/10 text-white border border-cyber-purple/30 glow-text-small"
   };
 
   return (

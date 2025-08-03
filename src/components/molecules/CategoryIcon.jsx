@@ -49,11 +49,11 @@ const CategoryIcon = ({ category, size = "md", className }) => {
         className
       )}
     >
-      <ApperIcon
+<ApperIcon
         name={getCategoryIcon(category)}
         size={iconSizes[size]}
         className={cn(
-          isExpense ? "text-secondary-600" : "text-primary-600"
+          isExpense ? "text-cyber-purple" : "text-cyber-neon"
         )}
       />
     </div>

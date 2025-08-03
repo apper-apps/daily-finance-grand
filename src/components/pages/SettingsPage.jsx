@@ -60,32 +60,32 @@ return (
       />
       
       {/* Bengali Quotes Feature Status */}
-      {settings?.bengaliQuotes && (
-        <div className="bg-white rounded-lg shadow-card p-6">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">
+{settings?.bengaliQuotes && (
+        <div className="bg-gray-900/80 rounded-lg shadow-card p-6 border border-gray-700 cyber-card">
+          <h3 className="text-lg font-semibold text-white mb-4 font-mono">
             দৈনিক বাংলা উক্তি 📖
           </h3>
           <div className="space-y-3">
             <div className="flex justify-between items-center">
-              <span className="text-gray-600">বর্তমান অবস্থা:</span>
+              <span className="text-white/70">বর্তমান অবস্থা:</span>
               <span className={`px-3 py-1 rounded-full text-sm ${
                 settings.bengaliQuotes.enabled && settings.bengaliQuotes.permissionGranted
-                  ? 'bg-green-100 text-green-700'
-                  : 'bg-gray-100 text-gray-700'
+                  ? 'bg-cyber-neon/10 text-cyber-neon border border-cyber-neon/30'
+                  : 'bg-gray-800 text-white border border-gray-600'
               }`}>
                 {settings.bengaliQuotes.enabled && settings.bengaliQuotes.permissionGranted
                   ? 'সক্রিয়' : 'নিষ্ক্রিয়'}
               </span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-gray-600">সময়:</span>
-              <span className="text-gray-800 font-medium">
+              <span className="text-white/70">সময়:</span>
+              <span className="text-white font-medium font-mono">
                 {settings.bengaliQuotes.time} (সকাল)
               </span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-gray-600">পরবর্তী উক্তি:</span>
-              <span className="text-gray-800">
+              <span className="text-white/70">পরবর্তী উক্তি:</span>
+              <span className="text-white font-mono">
                 উক্তি #{(settings.bengaliQuotes.currentIndex + 1)}
               </span>
             </div>

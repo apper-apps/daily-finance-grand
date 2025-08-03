@@ -59,13 +59,13 @@ const handleTransactionClick = (transaction) => {
       <Card className="p-4">
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-lg font-display font-semibold text-gray-900">
+<h3 className="text-lg font-display font-semibold text-white">
               লেনদেনের ইতিহাস
             </h3>
 <select
               value={selectedMonth}
               onChange={(e) => setSelectedMonth(e.target.value)}
-              className="rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm focus:border-accent-500 focus:outline-none focus:ring-2 focus:ring-accent-500/20"
+              className="rounded-lg border border-gray-600 bg-gray-800/50 px-3 py-2 text-sm text-white focus:border-cyber-purple focus:outline-none focus:ring-2 focus:ring-cyber-purple/20"
             >
               <option value={format(new Date(), "yyyy-MM")}>এই মাস</option>
               <option value={format(new Date(new Date().setMonth(new Date().getMonth() - 1)), "yyyy-MM")}>
@@ -93,16 +93,16 @@ const handleTransactionClick = (transaction) => {
           />
 
           {/* Monthly Summary */}
-          <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-100">
+          <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-600">
             <div className="text-center">
-              <p className="text-xs text-gray-600 mb-1">মাসিক আয়</p>
-              <p className="text-lg font-display font-semibold text-primary-600">
+              <p className="text-xs text-white mb-1">মাসিক আয়</p>
+              <p className="text-lg font-display font-semibold text-cyber-neon">
                 ৳{monthlyIncome.toLocaleString("bn-BD")}
               </p>
             </div>
             <div className="text-center">
-              <p className="text-xs text-gray-600 mb-1">মাসিক খরচ</p>
-              <p className="text-lg font-display font-semibold text-secondary-600">
+              <p className="text-xs text-white mb-1">মাসিক খরচ</p>
+              <p className="text-lg font-display font-semibold text-cyber-purple">
                 ৳{monthlyExpense.toLocaleString("bn-BD")}
               </p>
             </div>
@@ -122,11 +122,11 @@ filteredTransactions.map((transaction) => (
           ))
         ) : (
           <Card className="p-8 text-center">
-            <ApperIcon name="Receipt" size={48} className="text-gray-300 mx-auto mb-4" />
-            <h3 className="text-lg font-medium text-gray-900 mb-2">
+<ApperIcon name="Receipt" size={48} className="text-white mx-auto mb-4" />
+            <h3 className="text-lg font-medium text-white mb-2">
               কোনো লেনদেন পাওয়া যায়নি
             </h3>
-            <p className="text-gray-500 mb-6">
+            <p className="text-white/70 mb-6">
               {searchQuery 
                 ? "আপনার খোঁজা শর্ত অনুযায়ী কোনো লেনদেন খুঁজে পাওয়া যায়নি।"
                 : "এই মাসে এখনো কোনো লেনদেন যোগ করা হয়নি।"

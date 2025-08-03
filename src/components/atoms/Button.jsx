@@ -11,11 +11,11 @@ const Button = forwardRef(({
 }, ref) => {
 const variants = {
     primary: "bg-gradient-to-r from-cyber-neon to-cyber-neon/80 hover:from-cyber-neon/90 hover:to-cyber-neon text-black font-bold glow-box hover:glow-box-strong shadow-lg shadow-cyber-neon/30",
-    secondary: "bg-gray-800/50 hover:bg-gray-800/70 text-gray-200 border border-gray-600 hover:border-gray-500 font-mono shadow-lg backdrop-blur-sm",
+    secondary: "bg-gray-800/50 hover:bg-gray-800/70 text-white border border-gray-600 hover:border-gray-500 font-mono shadow-lg backdrop-blur-sm",
     success: "bg-gradient-to-r from-cyber-neon to-cyber-neon/80 hover:from-cyber-neon/90 hover:to-cyber-neon text-black font-bold glow-box shadow-lg shadow-cyber-neon/30",
     danger: "bg-gradient-to-r from-cyber-red to-cyber-red/80 hover:from-cyber-red/90 hover:to-cyber-red text-white font-bold glow-box shadow-lg shadow-cyber-red/30",
-    outline: "border-2 border-cyber-neon text-cyber-neon hover:bg-cyber-neon/10 glow-text hover:glow-box-small font-mono backdrop-blur-sm",
-    ghost: "text-gray-400 hover:text-cyber-neon hover:bg-cyber-neon/5 font-mono transition-all duration-300"
+    outline: "border-2 border-cyber-purple text-white hover:bg-cyber-purple/10 glow-text hover:glow-box-small font-mono backdrop-blur-sm",
+    ghost: "text-white hover:text-cyber-purple hover:bg-cyber-purple/5 font-mono transition-all duration-300"
   };
 
   const sizes = {
