@@ -131,3 +131,34 @@ body {
   backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.7);
 }
+
+/* Bengali font support */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap');
+
+.bengali-text {
+  font-family: 'Noto Sans Bengali', sans-serif;
+  line-height: 1.7;
+}
+
+/* Enhanced notification styles */
+.notification-quote {
+  font-family: 'Noto Sans Bengali', sans-serif;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.notification-status-active {
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  color: white;
+}
+
+.notification-status-inactive {
+  background: linear-gradient(135deg, #9E9E9E, #616161);
+  color: white;
+}
+
+/* Quote display enhancements */
+.quote-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-left: 4px solid #2E7D32;
+}

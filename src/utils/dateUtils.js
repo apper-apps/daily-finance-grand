@@ -79,6 +79,21 @@ export const formatMonthBengali = (dateString) => {
     "Nov": "নভেম্বর",
     "Dec": "ডিসেম্বর"
   };
-  
-  return `${bengaliMonths[month]} ${year}`;
+return `${bengaliMonths[month]} ${year}`;
+};
+
+export const parseTimeString = (timeString) => {
+  const [hours, minutes] = timeString.split(':').map(Number);
+  return { hours, minutes };
+};
+
+export const formatTimeString = (hours, minutes) => {
+  return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+};
+
+export const getScheduledDateTime = (timeString, targetDate = new Date()) => {
+  const { hours, minutes } = parseTimeString(timeString);
+  const scheduledDate = new Date(targetDate);
+  scheduledDate.setHours(hours, minutes, 0, 0);
+  return scheduledDate;
 };
